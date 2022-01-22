@@ -1,7 +1,19 @@
-import type { NextPage } from "next";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
-const Users: NextPage = () => {
-  return <div>Page Users </div>;
+import { routeUsername } from "routes";
+
+import type { NextPage } from "next";
+import type { NextRouter } from "next/router";
+
+const UsersPage: NextPage = () => {
+  const router: NextRouter = useRouter();
+
+  useEffect((): void => {
+    router.replace(routeUsername()).then();
+  }, []);
+
+  return <div>Users Page</div>;
 };
 
-export default Users;
+export default UsersPage;
