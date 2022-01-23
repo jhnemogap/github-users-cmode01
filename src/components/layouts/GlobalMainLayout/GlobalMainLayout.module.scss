@@ -20,6 +20,22 @@
 .header {
   display: flex;
   justify-content: space-between;
+  .toggleTheme {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    color: var(--text-color-secondary);
+    .text {
+      margin-right: 1rem;
+      font-weight: bold;
+      letter-spacing: 2.5px;
+    }
+    &:hover {
+      color: var(--btn-theme-color-hover);
+    }
+  }
 }
 
 .main {

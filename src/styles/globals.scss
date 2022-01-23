@@ -13,6 +13,7 @@
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
+  font-weight: normal;
 }
 
 html {
@@ -25,7 +26,6 @@ body {
   @extend html;
   @extend .lightTheme;
   font-size: 0.9375rem;
-  font-weight: normal;
   line-height: 1.5625rem;
   color: var(--text-color-primary);
   background-color: var(--bg-color-secondary);
