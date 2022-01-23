@@ -22,7 +22,8 @@ export function useToggleTheme(): [state, () => void] {
 
   useEffect((): void => {
     tag.current = document.querySelector("body")?.dataset ?? null;
-    if (!!tag.current) tag.current.theme = LIGHT_THEME_NAME;
+    const preferDark: boolean = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (!!tag.current) preferDark ? toggleTheme() : tag.current.theme === LIGHT_THEME_NAME;
   }, []);
 
   return [theme, toggleTheme];

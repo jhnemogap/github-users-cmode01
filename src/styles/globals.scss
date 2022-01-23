@@ -24,16 +24,16 @@ html {
 
 body {
   @extend html;
-  @extend .lightTheme;
+  @include vars.lightTheme;
   font-size: 0.9375rem;
   line-height: 1.5625rem;
   color: var(--text-color-primary);
   background-color: var(--bg-color-secondary);
   &[data-theme="light"] {
-    @extend .lightTheme;
+    @include vars.lightTheme;
   }
   &[data-theme="dark"] {
-    @extend .darkTheme;
+    @include vars.darkTheme;
   }
 }
 

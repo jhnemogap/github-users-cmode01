@@ -11,7 +11,7 @@ $breakPointXL: 75 * $fontSizeBase - 1;
 $breakPointXXL: 85 * $fontSizeBase - 1;
 
 // THEMES
-.lightTheme {
+@mixin lightTheme {
   --text-color-primary: #2b3442;
   --text-color-secondary: #4b6a9b;
   --btn-theme-color-hover: #222731;
@@ -21,7 +21,7 @@ $breakPointXXL: 85 * $fontSizeBase - 1;
   --action-color-secondary: #697c9a;
 }
 
-.darkTheme {
+@mixin darkTheme {
   --text-color-primary: #ffffff;
   --text-color-secondary: var(--text-color-primary);
   --btn-theme-color-hover: #90a4d4;
