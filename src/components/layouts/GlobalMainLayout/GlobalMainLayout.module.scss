@@ -1,7 +1,20 @@
+@use "../../../styles/vars";
+
 .container {
-  max-width: 730px;
+  max-width: 46rem;
   min-height: 100vh;
-  margin: auto;
+  margin: 0 6.4vw;
+  padding: 9.6vw 0 2rem;
+  @media (min-width: vars.$breakPointSM) {
+    margin: 0 12.5vw;
+    padding-top: 18.75vw;
+  }
+  @media (min-width: vars.$breakPointMD) {
+    padding-top: 9rem;
+  }
+  @media (min-width: vars.$breakPointXM) {
+    margin: 0 auto;
+  }
 }
 
 .header {
@@ -10,7 +23,5 @@
 }
 
 .main {
-}
-
-.footer {
+  width: 100%;
 }

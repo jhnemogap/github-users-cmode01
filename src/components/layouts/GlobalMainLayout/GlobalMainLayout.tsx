@@ -13,14 +13,11 @@ export function GlobalMainLayout(props: Props): JSX.Element {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <span>devfinder</span>
-
+        <h1>devfinder</h1>
         <button onClick={toggleTheme}>Change theme</button>
       </header>
 
       <main className={styles.main}>{children}</main>
-
-      <footer className={styles.footer} />
     </div>
   );
 }

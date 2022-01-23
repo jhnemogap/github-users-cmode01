@@ -1,6 +1,15 @@
 // FONTS
 $fontSizeBase: 16px;
 
+$breakPointXS: 20 * $fontSizeBase - 1;
+$breakPointS: 24 * $fontSizeBase - 1;
+$breakPointSM: 36 * $fontSizeBase - 1;
+$breakPointMD: 48 * $fontSizeBase - 1;
+$breakPointXM: 58 * $fontSizeBase - 1;
+$breakPointLG: 64 * $fontSizeBase - 1;
+$breakPointXL: 75 * $fontSizeBase - 1;
+$breakPointXXL: 85 * $fontSizeBase - 1;
+
 // THEMES
 .lightTheme {
   --text-color-primary: #2b3442;
