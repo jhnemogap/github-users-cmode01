@@ -1,19 +1,30 @@
 // FONTS
 $fontSizeBase: 16px;
 
+$breakPointXS: 20 * $fontSizeBase - 1;
+$breakPointS: 24 * $fontSizeBase - 1;
+$breakPointSM: 36 * $fontSizeBase - 1;
+$breakPointMD: 48 * $fontSizeBase - 1;
+$breakPointXM: 58 * $fontSizeBase - 1;
+$breakPointLG: 64 * $fontSizeBase - 1;
+$breakPointXL: 75 * $fontSizeBase - 1;
+$breakPointXXL: 85 * $fontSizeBase - 1;
+
 // THEMES
-.lightTheme {
+@mixin lightTheme {
   --text-color-primary: #2b3442;
   --text-color-secondary: #4b6a9b;
+  --btn-theme-color-hover: #222731;
   --bg-color-primary: #fefefe;
   --bg-color-secondary: #f6f8ff;
   --action-color-primary: #0079ff;
   --action-color-secondary: #697c9a;
 }
 
-.darkTheme {
+@mixin darkTheme {
   --text-color-primary: #ffffff;
-  --text-color-secondary: #ffffff;
+  --text-color-secondary: var(--text-color-primary);
+  --btn-theme-color-hover: #90a4d4;
   --bg-color-primary: #1e2a47;
   --bg-color-secondary: #141d2f;
   --action-color-primary: #0079ff;
