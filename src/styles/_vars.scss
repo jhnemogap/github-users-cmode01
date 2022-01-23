@@ -1,0 +1,21 @@
+// FONTS
+$fontSizeBase: 16px;
+
+// THEMES
+.lightTheme {
+  --text-color-primary: #2b3442;
+  --text-color-secondary: #4b6a9b;
+  --bg-color-primary: #fefefe;
+  --bg-color-secondary: #f6f8ff;
+  --action-color-primary: #0079ff;
+  --action-color-secondary: #697c9a;
+}
+
+.darkTheme {
+  --text-color-primary: #ffffff;
+  --text-color-secondary: #ffffff;
+  --bg-color-primary: #1e2a47;
+  --bg-color-secondary: #141d2f;
+  --action-color-primary: #0079ff;
+  --action-color-secondary: #ffffffc0;
+}

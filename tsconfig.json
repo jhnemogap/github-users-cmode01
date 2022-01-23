@@ -4,7 +4,9 @@
     "paths": {
       "constants/*": ["constants/*"],
       "routes": ["routing/routes.ts"],
-      "styles/*": ["styles/*"]
+      "styles/*": ["styles/*"],
+      "types/*": ["types/*"],
+      "utils/*": ["utils/*"]
     },
     "target": "ES2020",
     "lib": ["dom", "dom.iterable", "esnext"],
