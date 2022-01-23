@@ -6,14 +6,14 @@ import { routeUsername } from "routes";
 import type { NextPage } from "next";
 import type { NextRouter } from "next/router";
 
-const HomePage: NextPage = () => {
+const UsersPage: NextPage = () => {
   const router: NextRouter = useRouter();
 
   useEffect((): void => {
     router.replace(routeUsername()).then();
   }, []);
 
-  return <div>Homepage</div>;
+  return <div>Users Page</div>;
 };
 
-export default HomePage;
+export default UsersPage;
