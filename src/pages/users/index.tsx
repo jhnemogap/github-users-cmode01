@@ -10,7 +10,7 @@ const UsersPage: NextPage = () => {
   const router: NextRouter = useRouter();
 
   useEffect((): void => {
-    router.replace(routeUsername()).then();
+    router.replace(routeUsername({})).then();
   }, []);
 
   return <div>Users Page</div>;
