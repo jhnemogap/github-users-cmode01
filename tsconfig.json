@@ -2,9 +2,10 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
+      "constants/*": ["constants/*"],
       "components/*": ["components/*"],
       "layouts/*": ["components/layouts/*"],
-      "constants/*": ["constants/*"],
+      "hooks/*": ["hooks/*"],
       "routes": ["routing/routes.ts"],
       "styles/*": ["styles/*"],
       "types/*": ["types/*"],
