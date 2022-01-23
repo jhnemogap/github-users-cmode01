@@ -3,6 +3,9 @@
     "baseUrl": "./src",
     "paths": {
       "constants/*": ["constants/*"],
+      "components/*": ["components/*"],
+      "layouts/*": ["components/layouts/*"],
+      "hooks/*": ["hooks/*"],
       "routes": ["routing/routes.ts"],
       "styles/*": ["styles/*"],
       "types/*": ["types/*"],
