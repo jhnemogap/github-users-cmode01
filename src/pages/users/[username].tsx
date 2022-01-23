@@ -1,7 +1,5 @@
 import { useRouter } from "next/router";
 
-import { toggleTheme } from "utils/styles";
-
 import type { NextPage } from "next";
 import type { NextRouter } from "next/router";
 
@@ -24,10 +22,6 @@ const UsernamePage: NextPage = () => {
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur beatae consequatur earum fuga neque nostrum
         ratione rerum sapiente sit vero. Alias culpa dolorum eius eligendi eum omnis perspiciatis vitae voluptates?
       </p>
-
-      <br />
-
-      <button onClick={toggleTheme}>Change theme</button>
     </div>
   );
 };
