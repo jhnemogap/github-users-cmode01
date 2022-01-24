@@ -20,12 +20,14 @@
 .header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2.25rem;
   .toggleTheme {
+    padding: 0;
     display: inline-flex;
     align-items: center;
-    background-color: transparent;
     border: 0;
     cursor: pointer;
+    background-color: transparent;
     color: var(--text-color-secondary);
     .text {
       margin-right: 1rem;
