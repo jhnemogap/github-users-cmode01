@@ -19,6 +19,8 @@ $breakPointXXL: 85 * $fontSizeBase - 1;
   --bg-color-secondary: #f6f8ff;
   --action-color-primary: #0079ff;
   --action-color-secondary: #697c9a;
+  --action-color-primary-hover: #60abff;
+  --box-shadow-primary: 0 16px 30px -10px #4660bb33;
 }
 
 @mixin darkTheme {
@@ -29,4 +31,6 @@ $breakPointXXL: 85 * $fontSizeBase - 1;
   --bg-color-secondary: #141d2f;
   --action-color-primary: #0079ff;
   --action-color-secondary: #ffffffc0;
+  --action-color-primary-hover: #60abff;
+  --box-shadow-primary: _;
 }
