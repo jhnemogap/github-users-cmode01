@@ -1,0 +1,39 @@
+@use "../../styles/vars";
+
+.card {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  row-gap: 1.5rem;
+  padding: 2rem 1.5rem 3rem;
+  border-radius: 1rem;
+  background-color: var(--bg-color-primary);
+  box-shadow: var(--box-shadow-primary);
+  @media (min-width: vars.$breakPointMD) {
+    padding: 2.5rem;
+  }
+  @media (min-width: vars.$breakPointXM) {
+    padding: 3rem;
+  }
+}
+
+.statisticsSection {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.125rem 1rem;
+  background-color: var(--bg-color-secondary);
+  .statisticItem {
+    text-align: center;
+  }
+  @media (min-width: vars.$breakPointMD) {
+    padding: 1rem 2rem;
+    .statisticItem {
+      text-align: left;
+      &:first-child {
+        width: 8.6875rem;
+      }
+      &:nth-child(n + 2) {
+        flex-grow: 1;
+      }
+    }
+  }
+}

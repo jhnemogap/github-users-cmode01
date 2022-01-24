@@ -6,6 +6,7 @@ import { SearchBar, UserCard } from "components";
 import { routeUsername } from "routes";
 
 import { USERNAME_DEFAULT } from "constants/general";
+import styles from "./[username].module.scss";
 
 import type { NextPage } from "next";
 import type { NextRouter } from "next/router";
@@ -63,7 +64,7 @@ const UsernamePage: NextPage = () => {
   }, [username]);
 
   return (
-    <section style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+    <section className={styles.page}>
       <SearchBar onSearch={handleOnSearch} />
       <UserCard
         avatar={fakeData.avatar_url}
