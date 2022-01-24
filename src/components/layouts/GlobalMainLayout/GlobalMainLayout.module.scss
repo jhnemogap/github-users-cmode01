@@ -21,6 +21,9 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 2.25rem;
+  .title {
+    font-size: 1.625rem;
+  }
   .toggleTheme {
     padding: 0;
     display: inline-flex;

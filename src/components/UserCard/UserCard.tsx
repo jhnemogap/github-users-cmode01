@@ -1,4 +1,5 @@
 import { TEXT_BIOGRAPHY_DEFAULT, TEXT_NOT_AVAILABLE } from "constants/general";
+import styles from "./UserCard.module.scss";
 
 interface Props {
   username: string;
@@ -34,7 +35,7 @@ export function UserCard(props: Props): JSX.Element {
   const joinedDateString: string[] = new Date(joined).toDateString().slice(4).split(" ");
 
   return (
-    <article>
+    <article className={styles.card}>
       <header>
         <img alt={"avatar"} src={avatar} width="100%" />
         <h1 aria-roledescription="name of the user">{name || username + "@"}</h1>
@@ -46,20 +47,20 @@ export function UserCard(props: Props): JSX.Element {
       </header>
 
       <main>
-        <section>
-          <div>
+        <section className={styles.statisticsSection}>
+          <div className={styles.statisticItem}>
             <h4>repos</h4>
-            <p>{repos}</p>
+            <p className={"h2"}>{repos}</p>
           </div>
 
-          <div>
+          <div className={styles.statisticItem}>
             <h4>followers</h4>
-            <p>{followers}</p>
+            <p className={"h2"}>{followers}</p>
           </div>
 
-          <div>
+          <div className={styles.statisticItem}>
             <h4>following</h4>
-            <p>{following}</p>
+            <p className={"h2"}>{following}</p>
           </div>
         </section>
       </main>
