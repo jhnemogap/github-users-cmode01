@@ -12,13 +12,15 @@ $breakPointXXL: 85 * $fontSizeBase - 1;
 
 // THEMES
 @mixin lightTheme {
-  --text-color-primary: #2b3442;
-  --text-color-secondary: #4b6a9b;
+  --text-color-primary: #4b6a9b;
+  --text-color-secondary: #2b3442;
   --btn-theme-color-hover: #222731;
   --bg-color-primary: #fefefe;
   --bg-color-secondary: #f6f8ff;
   --action-color-primary: #0079ff;
   --action-color-secondary: #697c9a;
+  --action-color-primary-hover: #60abff;
+  --box-shadow-primary: 0 16px 30px -10px #4660bb33;
 }
 
 @mixin darkTheme {
@@ -29,4 +31,6 @@ $breakPointXXL: 85 * $fontSizeBase - 1;
   --bg-color-secondary: #141d2f;
   --action-color-primary: #0079ff;
   --action-color-secondary: #ffffffc0;
+  --action-color-primary-hover: #60abff;
+  --box-shadow-primary: _;
 }

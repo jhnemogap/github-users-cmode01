@@ -1,4 +1,4 @@
-import { DEFAULT_USERNAME } from "constants/general";
+import { USERNAME_DEFAULT } from "constants/general";
 
 export const routeRoot = (): string => "/";
 
@@ -7,6 +7,6 @@ export const routeHome = (): string => routeRoot();
 export const routeUsers = (): string => routeHome() + "users";
 
 export const routeUsername = (params: { username?: string }): string => {
-  const { username = DEFAULT_USERNAME } = params;
+  const { username = USERNAME_DEFAULT } = params;
   return routeUsers() + `/${username}`;
 };
