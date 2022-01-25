@@ -23,6 +23,7 @@
   margin-bottom: 2.25rem;
   .title {
     font-size: 1.625rem;
+    color: var(--text-color-secondary);
   }
   .toggleTheme {
     padding: 0;
@@ -31,7 +32,7 @@
     border: 0;
     cursor: pointer;
     background-color: transparent;
-    color: var(--text-color-secondary);
+    color: var(--text-color-primary);
     .text {
       margin-right: 1rem;
       font-weight: bold;
