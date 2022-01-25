@@ -82,7 +82,9 @@ h4,
 }
 
 button {
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   border: none;
   border-radius: 0.625rem;
   cursor: pointer;
@@ -90,6 +92,11 @@ button {
   background-color: var(--action-color-primary);
   &:hover {
     background-color: var(--action-color-primary-hover);
+  }
+  @media (min-width: vars.$breakPointSM) {
+    padding: 0.8175rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
