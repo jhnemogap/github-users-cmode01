@@ -32,21 +32,32 @@ export function UserCard(props: Props): JSX.Element {
     company,
   } = props;
 
-  const joinedDateString: string[] = new Date(joined).toDateString().slice(4).split(" ");
+  const joinedArray: string[] = new Date(joined).toDateString().slice(4).split(" ");
+  const joinedText: string = ["Joined", joinedArray[1], joinedArray[0], joinedArray[2]].join(" ");
 
   return (
     <article className={styles.card}>
-      <header>
-        <img alt={"avatar"} src={avatar} width="100%" />
-        <h1 aria-roledescription="name of the user">{name || username + "@"}</h1>
-        <h3 aria-roledescription="username to login">@{username}</h3>
-        <p aria-roledescription="date the user joined github">
-          joined {joinedDateString[1]} {joinedDateString[0]} {joinedDateString[2]}
-        </p>
-        <p aria-roledescription="user biography">{biography || TEXT_BIOGRAPHY_DEFAULT}</p>
+      <header className={styles.header}>
+        <img alt={"avatar"} src={avatar} width="100%" className={styles.avatar} />
+
+        <section className={styles.intro}>
+          <h1 className={styles.name} aria-roledescription="name of the user">
+            {name || `${username}@`}
+          </h1>
+          <h3 className={styles.username} aria-roledescription="username to login">
+            {`@${username}`}
+          </h3>
+          <p className={`h3 ${styles.joined}`} aria-roledescription="date the user joined github">
+            {joinedText}
+          </p>
+        </section>
+
+        <section className={styles.bio} style={{ opacity: !biography ? "50%" : "" }}>
+          <p aria-roledescription="user biography">{biography || TEXT_BIOGRAPHY_DEFAULT}</p>
+        </section>
       </header>
 
-      <main>
+      <main className={styles.main}>
         <section className={styles.statisticsSection}>
           <div className={styles.statisticItem}>
             <h4>repos</h4>
@@ -65,7 +76,7 @@ export function UserCard(props: Props): JSX.Element {
         </section>
       </main>
 
-      <footer>
+      <footer className={styles.footer}>
         <p>{location || TEXT_NOT_AVAILABLE}</p>
         <p>{twitter || TEXT_NOT_AVAILABLE}</p>
         <p>{website || TEXT_NOT_AVAILABLE}</p>
