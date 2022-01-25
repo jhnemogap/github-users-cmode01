@@ -1,0 +1,40 @@
+@use "../../styles/vars";
+
+.searchBar {
+  display: inline-grid;
+  column-gap: 0.5rem;
+  grid-template-columns: min-content auto min-content;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: var(--bg-color-primary);
+  box-shadow: var(--box-shadow-primary);
+  @media (min-width: vars.$breakPointSM) {
+    column-gap: 1.5rem;
+    padding: 0.625rem 0.625rem 0.625rem 2rem;
+  }
+
+  .icon {
+    height: 1.25rem;
+    width: 1.25rem;
+    color: var(--action-color-primary);
+    path {
+      transform: scale(0.83333);
+    }
+    @media (min-width: vars.$breakPointSM) {
+      height: 1.5rem;
+      width: 1.5rem;
+      path {
+        transform: scale(1);
+      }
+    }
+  }
+  .input {
+    border: none;
+    background-color: transparent;
+    color: var(--btn-theme-color-hover);
+  }
+  .btn {
+    text-transform: capitalize;
+  }
+}
