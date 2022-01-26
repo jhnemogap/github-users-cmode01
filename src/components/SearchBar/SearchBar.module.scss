@@ -2,8 +2,8 @@
 
 .searchBar {
   display: inline-grid;
-  column-gap: 0.5rem;
   grid-template-columns: min-content auto min-content;
+  column-gap: 0.5rem;
   align-items: center;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   border-radius: 1rem;
@@ -20,6 +20,7 @@
   }
 
   .input {
+    width: 100%;
     border: none;
     background-color: var(--bg-color-primary);
     &:-webkit-autofill,
