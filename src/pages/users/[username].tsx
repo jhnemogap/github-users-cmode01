@@ -10,76 +10,51 @@ import styles from "./[username].module.scss";
 
 import type { NextPage } from "next";
 import type { NextRouter } from "next/router";
-
-const fakeData = {
-  login: "octocat",
-  id: 583231,
-  node_id: "MDQ6VXNlcjU4MzIzMQ==",
-  avatar_url: "https://avatars.githubusercontent.com/u/583231?v=4",
-  gravatar_id: "",
-  url: "https://api.github.com/users/octocat",
-  html_url: "https://github.com/octocat",
-  followers_url: "https://api.github.com/users/octocat/followers",
-  following_url: "https://api.github.com/users/octocat/following{/other_user}",
-  gists_url: "https://api.github.com/users/octocat/gists{/gist_id}",
-  starred_url: "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-  subscriptions_url: "https://api.github.com/users/octocat/subscriptions",
-  organizations_url: "https://api.github.com/users/octocat/orgs",
-  repos_url: "https://api.github.com/users/octocat/repos",
-  events_url: "https://api.github.com/users/octocat/events{/privacy}",
-  received_events_url: "https://api.github.com/users/octocat/received_events",
-  type: "User",
-  site_admin: false,
-  name: "The Octocat",
-  company: "@github",
-  blog: "https://github.blog",
-  location: "San Francisco",
-  email: null,
-  hireable: null,
-  bio: null,
-  twitter_username: null,
-  public_repos: 8,
-  public_gists: 8,
-  followers: 4633,
-  following: 9,
-  created_at: "2011-01-25T18:44:36Z",
-  updated_at: "2021-12-22T15:07:10Z",
-};
+import type { GitHubUserResponse } from "types/users";
 
 const UsernamePage: NextPage = () => {
   const router: NextRouter = useRouter();
 
+  const [githubUser, setUserData] = useState<GitHubUserResponse | null>(null);
   const [username, setUsername] = useState<string>(USERNAME_DEFAULT);
 
-  const handleOnSearch = (value: string): void => {
-    setUsername(value || USERNAME_DEFAULT);
+  const handleOnSearch = (value: string): void => setUsername(value || USERNAME_DEFAULT);
+
+  const handleResponseSuccess = (resource: GitHubUserResponse): void => {
+    setUserData(resource);
+    router.push(routeUsername({ username })).then();
   };
 
-  useEffect((): void => {
-    if (username !== router.query?.username) setUsername(router.query?.username as string);
-  }, [router.query?.username]);
+  function fetching(): void {
+    fetch(`https://api.github.com/users/${username}`)
+      .then((resp: Response): Promise<any> | null => (resp.status === 200 ? resp.json() : null))
+      .then((resource: GitHubUserResponse) => resource && handleResponseSuccess(resource))
+      .catch((_) => undefined);
+  }
 
   useEffect((): void => {
-    if (username !== router.query?.username) router.push(routeUsername({ username })).then();
+    fetching();
   }, [username]);
 
   return (
     <section className={styles.page}>
       <SearchBar onSearch={handleOnSearch} />
-      <UserCard
-        avatar={fakeData.avatar_url}
-        name={fakeData.name}
-        username={fakeData.login}
-        joined={fakeData.created_at}
-        biography={fakeData.bio}
-        repos={fakeData.public_repos}
-        followers={fakeData.followers}
-        following={fakeData.following}
-        location={fakeData.location}
-        website={fakeData.blog}
-        twitter={fakeData.twitter_username}
-        company={fakeData.company}
-      />
+      {!!githubUser && (
+        <UserCard
+          avatar={githubUser.avatar_url}
+          name={githubUser.name}
+          username={githubUser.login}
+          joined={githubUser.created_at}
+          biography={githubUser.bio}
+          repos={githubUser.public_repos}
+          followers={githubUser.followers}
+          following={githubUser.following}
+          location={githubUser.location}
+          website={githubUser.blog}
+          twitter={githubUser.twitter_username}
+          company={githubUser.company}
+        />
+      )}
     </section>
   );
 };

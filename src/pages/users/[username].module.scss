@@ -8,3 +8,12 @@
     gap: 1.5rem;
   }
 }
+
+.fetchError {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #ef3c3c;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow-primary);
+  background-color: var(--bg-color-primary);
+}
