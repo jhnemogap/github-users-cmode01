@@ -9,10 +9,6 @@
   border-radius: 1rem;
   background-color: var(--bg-color-primary);
   box-shadow: var(--box-shadow-primary);
-  @media (min-width: vars.$breakPointSM) {
-    column-gap: 1.5rem;
-    padding: 0.625rem 0.625rem 0.625rem 2rem;
-  }
 
   .icon {
     height: 1.25rem;
@@ -21,20 +17,32 @@
     path {
       transform: scale(0.83333);
     }
-    @media (min-width: vars.$breakPointSM) {
+  }
+
+  .input {
+    border: none;
+    color: var(--btn-theme-color-hover);
+    background-color: var(--bg-color-primary);
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0 1000px var(--bg-color-primary) inset;
+    }
+  }
+
+  .btn {
+    text-transform: capitalize;
+  }
+
+  @media (min-width: vars.$breakPointSM) {
+    column-gap: 1.5rem;
+    padding: 0.625rem 0.625rem 0.625rem 2rem;
+    .icon {
       height: 1.5rem;
       width: 1.5rem;
       path {
         transform: scale(1);
       }
     }
-  }
-  .input {
-    border: none;
-    background-color: transparent;
-    color: var(--btn-theme-color-hover);
-  }
-  .btn {
-    text-transform: capitalize;
   }
 }

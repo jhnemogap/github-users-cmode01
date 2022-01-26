@@ -120,6 +120,12 @@ input {
     font-size: 0.8125rem;
     color: var(--text-color-primary);
   }
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--text-color-secondary);
+    -webkit-box-shadow: 0 0 0 1000px var(--bg-color-secondary) inset;
+  }
   @media (min-width: vars.$breakPointSM) {
     font-size: 1.125rem;
     &::placeholder {
