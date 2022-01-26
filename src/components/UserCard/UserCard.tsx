@@ -5,22 +5,9 @@ import { CompanyIcon, LocationIcon, TwitterIcon, WebsiteIcon } from "components"
 import { TEXT_BIOGRAPHY_DEFAULT, TEXT_NOT_AVAILABLE } from "constants/general";
 import styles from "./UserCard.module.scss";
 
-export interface Props {
-  username: string;
-  avatar: string;
-  joined: string; // is a Date on UTC
-  repos: number;
-  followers: number;
-  following: number;
-  name?: string | null;
-  biography?: string | null;
-  location?: string | null;
-  website?: string | null;
-  twitter?: string | null;
-  company?: string | null;
-}
+import type { UserCardProps } from "types/users";
 
-export function UserCard(props: Props): JSX.Element {
+export function UserCard(props: UserCardProps): JSX.Element {
   const {
     username,
     avatar,
