@@ -2,9 +2,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
-*,
-*::before,
-*::after,
 html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -20,10 +17,19 @@ html {
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+*,
+*::before,
+*::after {
+  @extend html;
+  font-size: 0.8125rem;
+  line-height: 1.5625rem;
+  @media (min-width: vars.$breakPointSM) {
+    font-size: 0.9375rem;
+  }
+}
+
 body {
   @include vars.lightTheme;
-  font-size: 0.9375rem;
-  line-height: 1.5625rem;
   color: var(--text-color-primary);
   background-color: var(--bg-color-secondary);
   &[data-theme="light"] {
