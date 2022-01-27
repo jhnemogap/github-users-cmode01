@@ -30,7 +30,17 @@ preferences. _Hint_: Research `prefers-color-scheme` in CSS.
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![320-dark](./public/screenshot_dark_320.png)
+![320-light](./public/screenshot_light_320.png)
+
+![375-dark](./public/screenshot_dark_375.png)
+![375-light](./public/screenshot_light_375.png)
+
+![768-dark](./public/screenshot_dark_768.png)
+![768-light](./public/screenshot_light_768.png)
+
+![1440-dark](./public/screenshot_dark_1440.png)
+![1440-light](./public/screenshot_light_1440.png)
 
 ### Links
 
@@ -42,37 +52,36 @@ preferences. _Hint_: Research `prefers-color-scheme` in CSS.
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
 - Mobile-first workflow
+- CSS custom properties, Flexbox, CSS Grid
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 - [TypeScript](https://www.typescriptlang.org/docs/handbook/react.html) - 
 TypeScript is JavaScript with syntax for types.
+
 - [Sass](https://sass-lang.com/) - For styles using 
 [scss modules](https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css)
-- MOREEEEEEEE
+
+- [ESlint](https://eslint.org/) - Find and fix problems in your JavaScript styles code
+
+- [Prettier](https://prettier.io/) - An opinionated code formatter
+
+- [husky](https://www.npmjs.com/package/husky) +
+[lint-staged](https://github.com/okonet/lint-staged) +
+[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) - 
+Superpowers when performing particular git actions
+
+- [Node Version Manager](https://github.com/nvm-sh/nvm) - `nvm` allows you to quickly 
+install and use different versions of node via the command line. Its installation 
+is prior to and separate from the project. If you do not have this, it is recommended 
+to install the local version of node.js indicated by the `.nvmrc` file
+
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This section summarizes some of the main learnings while working on this project.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+XXXXXXXXX
 
 ### Continued development
 
@@ -80,16 +89,35 @@ Use this section to outline areas that you want to continue focusing on in futur
 projects. These could be concepts you're still not completely comfortable with 
 or techniques you found useful that you want to refine and perfect.
 
+XXXXXXX
+
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. 
-I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which 
-helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [MDN Web Docs](https://developer.mozilla.org/en-US/) - It is for me the essential 
+documentation of HTML, CSS and JavaScript (and more). On many occasions, by rereading a 
+concept that I already know, I can reinforce it or learn something new.
+
+- [W3Schools](https://www.w3schools.com/) - It may not be as flashy as MDN but in many 
+cases it is very useful because its explanations are based on direct and quick examples.
+
+- [CSS Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) +
+[CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) - 
+comprehensive guide to CSS flexbox and Grid layout. 
+When the concern is about CSS flexbox or Grid, this is the most important resource that is used. 
+
+- [React TypeScript Cheatsheets](https://react-typescript-cheatsheet.netlify.app/) -
+Cheatsheets for experienced React developers getting started with TypeScript.
+Especially since it contains various details applied to function components and hooks.
+
+- [Esencial image editor](https://ezgif.com/)
+- [Smart WebP, PNG and JPEG compression](https://tinypng.com/)
 
 ## Author
 
-- Linkedin - [jhnemogap](https://www.linkedin.com/in/jhnemogap/)
+- Name: Jorge Humberto Nemogá Pinzón
+- Linkedin - [jhnemogap](https://www.linkedin.com/in/jhnemogap)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+## How does the project run on the local machine?
+
+- XXXXXXXXX
