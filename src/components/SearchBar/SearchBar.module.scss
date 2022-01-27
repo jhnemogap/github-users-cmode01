@@ -20,14 +20,23 @@
     }
   }
 
-  .input {
-    width: 100%;
-    border: none;
-    background-color: var(--bg-color-primary);
-    &:-webkit-autofill,
-    &:-webkit-autofill:hover,
-    &:-webkit-autofill:focus {
-      -webkit-box-shadow: 0 0 0 1000px var(--bg-color-primary) inset;
+  .inputContainer {
+    position: relative;
+    > .input {
+      width: 100%;
+      border: none;
+      background-color: var(--bg-color-primary);
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0 1000px var(--bg-color-primary) inset;
+      }
+    }
+    > .errorLabel {
+      position: absolute;
+      z-index: 10;
+      right: 0;
+      color: var(--text-color-error);
     }
   }
 
