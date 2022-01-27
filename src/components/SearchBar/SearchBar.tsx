@@ -23,16 +23,21 @@ export function SearchBar(props: Props): JSX.Element {
       <form name={"search-bar"} className={styles.searchBar} onSubmit={handleOnSubmit}>
         <SearchIcon className={styles.icon} />
 
-        <input
-          type={"text"}
-          name={"search"}
-          placeholder={"Search GitHub username..."}
-          tabIndex={1}
-          autoFocus={true}
-          className={styles.input}
-        />
-
-        {error && <span role={"label"}>No results</span>}
+        <div className={styles.inputContainer}>
+          <input
+            type={"text"}
+            name={"search"}
+            placeholder={"Search GitHub username..."}
+            tabIndex={1}
+            autoFocus={true}
+            className={styles.input}
+          />
+          {error && (
+            <span role={"label"} className={styles.errorLabel}>
+              No results
+            </span>
+          )}
+        </div>
 
         <button type={"submit"} tabIndex={2} className={styles.btn}>
           search
