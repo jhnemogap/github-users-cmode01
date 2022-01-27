@@ -15,8 +15,9 @@ import type { GitHubUserResponse } from "types/users";
 const UsernamePage: NextPage = () => {
   const router: NextRouter = useRouter();
 
-  const [githubUser, setUserData] = useState<GitHubUserResponse | null>(null);
   const [username, setUsername] = useState<string>(USERNAME_DEFAULT);
+  const [errorData, setErrorData] = useState<boolean>(false);
+  const [githubUser, setUserData] = useState<GitHubUserResponse | null>(null);
 
   const handleOnSearch = (value: string): void => setUsername(value || USERNAME_DEFAULT);
 
@@ -28,8 +29,8 @@ const UsernamePage: NextPage = () => {
   function fetching(): void {
     fetch(`https://api.github.com/users/${username}`)
       .then((resp: Response): Promise<any> | null => (resp.status === 200 ? resp.json() : null))
-      .then((resource: GitHubUserResponse) => resource && handleResponseSuccess(resource))
-      .catch((_) => undefined);
+      .then((resource: GitHubUserResponse): void => (resource ? handleResponseSuccess(resource) : setErrorData(true)))
+      .catch((_) => setErrorData(true));
   }
 
   useEffect((): void => {
@@ -38,7 +39,7 @@ const UsernamePage: NextPage = () => {
 
   return (
     <section className={styles.page}>
-      <SearchBar onSearch={handleOnSearch} />
+      <SearchBar onSearch={handleOnSearch} error={errorData} />
       {!!githubUser && (
         <UserCard
           avatar={githubUser.avatar_url}
